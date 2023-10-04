@@ -1,5 +1,5 @@
 """
-Python Script to convert a list of terms listed in an xlsx sheet to an XML glossary conforming to the Moodle glossary template
+Python Script to convert a list of terms listed in a xlsx sheet to an XML glossary conforming to the Moodle glossary template
 
 Created at 2/1/22, Open Risk
 
@@ -7,7 +7,7 @@ Usage:
 
 1. Edit the GlossaryTemplate.xml to provide the glossary metadata (name and description)
 2. Edit the entry template in this script to provide the desired entry metadata
-3. Prepare an xlsx sheet with the terms and definitions arranged in columns with a header element indicating which one contains terms and which one contains definitions
+3. Prepare a xlsx sheet with the terms and definitions arranged in columns with a header element indicating which one contains terms and which one contains definitions
 4. Run the script: python xlsx2glossary.py to produce the glossary as output.xml
 5. Import the xml file into your moodle instance
 
@@ -74,8 +74,7 @@ for row in ws.iter_rows():
 # Append the entries to the template
 info.append(q)
 
-# Write the final output to an xml file named output.xml
-tree.write('output.xml', pretty_print=True, xml_declaration=True,   encoding="utf-8")
+# Write the final output to a xml file named output.xml
+tree.write('output.xml', pretty_print=True, xml_declaration=True, encoding="utf-8")
 
 # Load the output.xml into your moodle instance
-
