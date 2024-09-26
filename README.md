@@ -1,16 +1,20 @@
 # moodleUtils
+
 Various python scripts to help with moodle tasks
 
+## xlsx2glossary.py
 
-## xlsx2glossary.py  Create a Moodle glossary from an xlsx script
+Create a Moodle XML glossary from a xlsx document
 
 ### Usage:
 
-1. Edit the GlossaryTemplate.xml to provide the glossary metadata (name and description)
-2. Edit the entry template in this script to provide the desired entry metadata
-3. Prepare an xlsx sheet with the terms and definitions arranged in columns with a header element indicating which one contains terms and which one contains definitions
-4. Run the script: python xlsx2glossary.py to produce the glossary as output.xml
-5. Import the xml file into your moodle instance
+1. Clone the repository to your local system and set it as the working directory
+2. Edit the GlossaryTemplate.xml to provide the glossary *metadata* (Name and Description of the glossary)
+3. Edit the entry template in the [script](xlsx2glossary.py) to provide the desired entry metadata
+4. Prepare an [xlsx sheet](terms.xlsx) with the terms and definitions arranged in columns as follows: a header element
+   indicating which one contains *terms* and which one contains *definitions*
+5. Run the script, e.g., python3 xlsx2glossary.py to produce the glossary as output.xml
+6. Import the xml file into your moodle instance
 
 ### Dependencies
 
